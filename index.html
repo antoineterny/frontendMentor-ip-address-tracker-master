@@ -1,92 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-		<title>Frontend Mentor | IP Address Tracker</title>
+    <title>Frontend Mentor | IP Address Tracker</title>
 
-		<!-- Leaflet -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
-			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
-			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-			crossorigin="anonymous"
-		></script>
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin="anonymous"
+    ></script>
 
-		<!-- google fonts Rubik -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
-			rel="stylesheet"
-		/>
+    <!-- google fonts Rubik -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-		<!-- stylesheets -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<header>
-			<h1>IP Address Tracker</h1>
-			<form>
-				<input
-					type="text"
-					name="query"
-					id="query"
-					placeholder="Search for any IP address or domain"
-				/>
-				<input type="submit" value="" />
-			</form>
-		</header>
-    <ul id="result">
-      <li>
-        <h3>IP Address</h3>
-        <p id="ip"></p>
-      </li>
-      <li>
-        <h3>Location</h3>
-        <p id="city"></p>
-      </li>
-      <li>
-        <h3>Timezone</h3>
-        <p id="tz">UTC</p>
-      </li>
-      <li>
-        <h3>ISP</h3>
-        <p id="isp"></p>
-      </li>
-    </ul>
-		   
-		<!-- add offset value dynamically using the API -->
-		
-		<div id="mapid"></div>
-		<div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</div>
-		<script src="app.js"></script>
-	</body>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form>
+        <input
+          type="text"
+          name="query"
+          id="query"
+          placeholder="Search for any IP address or domain"
+        />
+        <input type="submit" value="" />
+      </form>
+      <div id="result">
+        <ul>
+          <li>
+            <h3>IP Address</h3>
+            <p id="ip"></p>
+          </li>
+          <li>
+            <h3>Location</h3>
+            <p id="city"></p>
+          </li>
+          <li>
+            <h3>Timezone</h3>
+            <p id="tz"></p>
+          </li>
+          <li>
+            <h3>ISP</h3>
+            <p id="isp"></p>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="mapid"></div>
+    <!-- <div id="overlay"></div> -->
+    
+    <div class="attribution">
+      Challenge by&nbsp;
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a
+      >.&nbsp; Coded by&nbsp;<a href="https://github.com/antoineterny">&nbsp;Antoine Terny</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
